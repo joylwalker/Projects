@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autumn</title>
+       <!-- fontawesome -->
+   <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+   integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"
+ />
+ <!-- Bootstrap CSS -->
+ <link
+ rel="stylesheet"
+ href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+ crossorigin="anonymous"
+/>
+    <style>
+         body{
+            background: rgba(190, 164, 60, 0.611);
+            font-family: caveat;
+         }
+
+         .name {
+            color: white;
+            font-family: caveat;
+            font-size: 72px;
+            font-weight: bold;
+            margin-top: 10px;
+            padding-left: 20px; padding-top: 10px;
+         }
+
+        /* 輪播功能 */
+         .wrapper {
+            width: 100%;
+            height: 30%;
+            padding-top: 20px;
+            text-align: center;
+            /* background-color:  rgba(190, 164, 60, 0.611); */
+         }
+
+         .carousel {
+            width: 55%;
+            margin: 0px auto;
+         }
+
+         .slick-slide {
+            /* 圖片與圖片的間隔大小 */
+            margin: 10px;
+         }
+
+         .slick-slide img {
+            width: 100%;
+            /* //圖片的邊框大小 */
+            border: 5px solid white;
+            object-fit: cover;
+         }
+
+         .content{
+            border: 2px solid white;
+            border-radius: 20px;
+            width: 70%; height: 60%;
+            margin-top: 25px; margin-left: 195px;
+            padding-left: 40px;
+            color: white;
+            font-family: "chenyuluoyan";
+            font-size: 24px;
+         }
+
+         @font-face {
+            font-family: 'chenyuluoyan';
+            src: url(chenyuluoyan_thin-main/ChenYuluoyan-Thin.ttf);
+         }
+
+         .button{
+            color: white;
+            font-size: 28px;
+         }
+
+         .back{
+            display: inline-block; 
+            margin-left: 40px;
+            padding-right: 1263px;
+            margin-bottom: 20px;
+         }
+
+         .next{
+            display: inline-block; 
+            margin-right: 40px;
+            margin-bottom: 20px;
+         }
+         a:link {
+            /* 正常、未訪問過的連結 */
+            color: white;
+            text-decoration: none;
+         }
+
+         a:visited {
+            /* 訪問過的連結 */
+            color: white;
+            text-decoration: none;
+         }
+
+         a:hover {
+            /* 游標放在連結上時 */
+            color: black;
+            text-decoration: none;
+         }
+
+         a:active {
+            /* 游標點擊時 */
+            color: black;
+            text-decoration: none;
+         }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="./chenyuluoyan_thin-main/" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="name">Autumn</div>
+    <!-- To use lazy loading, set a data-lazy attribute on your img tags and leave off the src -->
+    <!-- <img data-lazy="img/lazyfonz1.png"/> -->
+    <div class="wrapper">
+        <div id="cover" class="carousel">
+            <div><img data-lazy="./Pictures/Autumn/bd girl.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Autumn/bd girl 2.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Autumn/Taichung.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Autumn/Taichung 2.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Autumn/Taichung 3.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Autumn/大稻埕.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Autumn/大稻埕2.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Autumn/泡溫泉.jpeg" width="200" height="250"/></div>
+        </div>
+    </div>
+
+    <div class="control d-flex justify-content-center">
+      <a
+        class="btn m-2"
+        id="play"
+        type="button"
+        style="background-color: transparent; border: 1px solid white"
+      >
+        <i class="fa-solid fa-play" style="color: white"></i>
+      </a>
+      <a
+        class="btn m-2"
+        id="pause"
+        type="button"
+        style="background-color: transparent; border: 1px solid white"
+      >
+        <i class="fa-solid fa-pause" style="color: white"></i>
+      </a>
+    </div>
+  <!-- 歌曲播放進度 -->
+  <div class="progress">
+    <div
+      class="progress-bar"
+      id="progress-bar"
+      role="progressbar"
+      style="background-color:white"
+    ></div>
+  </div>
+
+    <div class="content">
+        <p>To: 長髮公主殿下<br/>
+            &emsp;長髮豬豬，不太記得確切創建這個角色的時間了，<br/>
+            &emsp;只依稀記得當初覺得豬豬很可愛，跟我女朋友一樣，是個美食探險家，<br/>
+            &emsp;有一次跟她鬧脾氣，事後要和好但餘氣未消的時候，<br/>
+            &emsp;加強了長髮豬豬的個人特色，很多層肉肉，嘻嘻！<br/>
+            &emsp;後來，這個角色就逐漸融入我們的生活中，成為了姆明谷不可或缺的一份子。<br/>
+            <br/>
+            &emsp;秋天，是我最喜歡的季節，也是我心愛的公主殿下誕生的月份，<br/>
+            &emsp;在一起之後，特別重視她的生日，大概是所有節日當中最重要的，<br/>
+            &emsp;儀式感和我在網路上的活躍程度大概會在那個月份開到滿點，<br/>
+            &emsp;希望讓她知道「她很重要！！！」（她很重，我也要！！！）<br/>
+            <br/>
+            &emsp;「如何讓你遇見我，在我最美麗的時刻」，這句話讓我想起了起了我們的愛情，<br/>
+            &emsp;跟你在一起，我從你眼中找到了我最美的模樣，<br/>
+            &emsp;而你的美，不僅是外表，更體現於內心的溫暖和善良、面對挑戰時的堅強及勇氣、<br/>
+            &emsp;工作時的專注、找美食時的積極與行動力，甚至是消滅蟲蟲時的帥氣，<br/>
+            &emsp;謝謝妳，讓我有機會目睹你最美的時刻。<br/>
+        </p>
+    </div> 
+
+    
+</div>
+<div class="button d-flex justify-content-between">
+   <div class="back"><a href="./autumn.html"><i class="fa-solid fa-backward"></i></div>
+   <div class="next"><a href="./winter.html"><i class="fa-solid fa-forward"></i></a></div>
+</div>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="./slick-1.8.1/slick/slick.js"></script>
+<script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+<script>
+    $('.carousel').slick({
+        lazyLoad: 'ondemand',
+        slidesToShow: 4,
+        slidesToScroll: 1
+    });
+</script>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var autumn = new Audio("./music/Perfect.mp3");
+      // 初始時隱藏暫停按鈕
+      $("#pause").hide();
+
+      $("#play").click(function () {
+        autumn.play();
+        $("#pause").show();
+        $("#play").hide();
+        // 立即將進度條設置為0%
+        $("#progress-bar").css("width", "0%");
+      });
+      $("#pause").click(function () {
+        autumn.pause();
+        $("#play").show();
+        $("#pause").hide();
+      });
+
+      //製作音樂播放進度條
+      function updateProgressBar() {
+        var percentage = (autumn.currentTime / autumn.duration) * 100;
+        $("#progress-bar").css("width", percentage + "%");
+      }
+      // 使用定時器每1/10秒更新進度條
+      var updateProgressInterval = setInterval(updateProgressBar, 80);
+
+      // 確保音樂播放時開始更新進度條
+      autumn.onplay = function () {
+        updateProgressInterval = setInterval(updateProgressBar, 80);
+      };
+
+      // 確保音樂暫停時停止更新進度條
+      autumn.onpause = function () {
+        clearInterval(updateProgressInterval);
+      };
+
+      // 確保音樂結束時重置進度條
+      // 自動偵測播放狀態，播放結束時顯示播放按鈕
+      autumn.onended = function () {
+        clearInterval(updateProgressInterval);
+        $("#progress-bar").css("width", "0");
+        $("#pause").hide();
+        $("#play").show();
+      };
+    </script>
+</body>
+</html>

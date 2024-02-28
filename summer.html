@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer</title>
+    
+   <!-- fontawesome -->
+   <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+   integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"
+ />
+ <!-- Bootstrap CSS -->
+ <link
+ rel="stylesheet"
+ href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+ crossorigin="anonymous"
+/>
+    <style>
+         body{
+            background: rgb(157, 191, 168);
+            font-family: caveat;
+         }
+
+         .name {
+            color: white;
+            font-family: caveat;
+            font-size: 72px;
+            font-weight: bold;
+            margin-top: 10px;
+            padding-left: 20px; padding-top: 10px;
+         }
+
+        /* 輪播功能 */
+         .wrapper {
+            width: 100%;
+            height: 30%;
+            padding-top: 20px;
+            text-align: center;
+            background-color:  rgb(157, 191, 168);
+         }
+
+         .carousel {
+            width: 55%;
+            margin: 0px auto;
+         }
+
+         .slick-slide {
+            /* 圖片與圖片的間隔大小 */
+            margin: 10px;
+         }
+
+         .slick-slide img {
+            width: 100%;
+            /* //圖片的邊框大小 */
+            border: 5px solid white;
+            object-fit: cover;
+         }
+
+         .content{
+            border: 2px solid white;
+            border-radius: 20px;
+            width: 70%; height: 60%;
+            margin-top: 25px; margin-left: 195px;
+            padding-left: 40px;
+            color: white;
+            font-family: "chenyuluoyan";
+            font-size: 24px;
+         }
+
+         @font-face {
+            font-family: 'chenyuluoyan';
+            src: url(chenyuluoyan_thin-main/ChenYuluoyan-Thin.ttf);
+         }
+
+         .button{
+            color: white;
+            font-size: 28px;
+         }
+
+         .back{
+            display: inline-block; 
+            margin-left: 40px;
+            padding-right: 1263px;
+            margin-bottom: 20px;
+         }
+
+         .next{
+            display: inline-block; 
+            margin-right: 40px;
+            margin-bottom: 20px;
+         }
+         a:link {
+            /* 正常、未訪問過的連結 */
+            color: white;
+            text-decoration: none;
+         }
+
+         a:visited {
+            /* 訪問過的連結 */
+            color: white;
+            text-decoration: none;
+         }
+
+         a:hover {
+            /* 游標放在連結上時 */
+            color: black;
+            text-decoration: none;
+         }
+
+         a:active {
+            /* 游標點擊時 */
+            color: black;
+            text-decoration: none;
+         }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="./chenyuluoyan_thin-main/" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="name">Summer</div>
+    <!-- To use lazy loading, set a data-lazy attribute on your img tags and leave off the src -->
+    <!-- <img data-lazy="img/lazyfonz1.png"/> -->
+    <div class="wrapper">
+        <div id="cover" class="carousel">
+            <div><img data-lazy="./Pictures/Summer/bike1.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Summer/bike2.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Summer/bike3.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Summer/bike4.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Summer/chiayi.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Summer/chiayi2.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Summer/chiayi3.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Summer/Tainan.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Summer/Tainan2.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Summer/Tainan3.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Summer/北流.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Summer/昭和食器.jpeg" width="200" height="250"/></div>
+        </div>
+    </div>
+
+    <div class="control d-flex justify-content-center">
+      <a
+        class="btn m-2"
+        id="play"
+        type="button"
+        style="background-color: transparent; border: 1px solid white"
+      >
+        <i class="fa-solid fa-play" style="color: white"></i>
+      </a>
+      <a
+        class="btn m-2"
+        id="pause"
+        type="button"
+        style="background-color: transparent; border: 1px solid white"
+      >
+        <i class="fa-solid fa-pause" style="color: white"></i>
+      </a>
+    </div>
+  <!-- 歌曲播放進度 -->
+  <div class="progress">
+    <div
+      class="progress-bar"
+      id="progress-bar"
+      role="progressbar"
+      style="background-color:white"
+    ></div>
+  </div>
+    <div class="content">
+        <p>To: 古靈精怪的細菌人<br/>
+            &emsp;細菌人，是麵包超人裡的反派角色，也是卡通裡古靈精怪的代表。<br/>
+            &emsp;在整理照片的時候，發現我們去年夏天去了好多地方，也做了好多平時想做的事喔～<br/>
+            &emsp;比如說，一起征服各個自行車道，像是基隆河左岸；<br/>
+            &emsp;一起嘗試比較少去的縣市，像是嘉義；吃到了cp值令人驚豔的早午餐-暖肚皮，<br/>
+            &emsp;也意外發掘了你喜歡的串燒店-燃手串，還有很好逛的餐具店-昭和食器，<br/>
+            &emsp;或是，一起重溫那些曾拜訪過，且念念不忘的地方，比如說，台南；<br/>
+            &emsp;小赤佬的乾鍋、鼎富發的豬油拌飯、各式的意麵、好吃鼠但我會過敏的吐司吐司<br/>
+            &emsp;抑或，陪你去看你喜歡的展覽，結果我也很喜歡，<br/>
+            &emsp;像是北流主辦的«唱，我們的歌»，以及去年在華山辦的的«普立茲新聞展»。<br/>
+            <br/>
+            &emsp;不得不承認，這段感情中，若沒有古靈精怪的細菌人，麵包超人不可能有如此豐富的體驗，<br/>
+            &emsp;也不得不佩服，面對宅又拗脾氣的我，你還能像哄小孩似的，半拉半哄的帶我出門。<br/>
+            &emsp;我知道你有時候也很抓狂，但踏出家門、離開溫暖舒適的小窩，<br/>
+            &emsp;對於宅宅來實在太痛苦了 QQ 。<br/>
+            <br/>
+            &emsp;謝謝妳這四年的溫柔與包容，<br/>
+            &emsp;未來，請細菌人繼續帶著麵包超人遨遊世界吧。
+        </p>
+    </div> 
+
+   
+</div>
+<div class="button d-flex justify-content-between">
+   <div class="back"><a href="./spring.html"><i class="fa-solid fa-backward"></i></div>
+   <div class="next"><a href="./autumn.html"><i class="fa-solid fa-forward"></i></a></div>
+</div>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="./slick-1.8.1/slick/slick.js"></script>
+<script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+<script>
+    $('.carousel').slick({
+        lazyLoad: 'ondemand',
+        slidesToShow: 4,
+        slidesToScroll: 1
+    });
+</script>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var summer = new Audio("./music/Better Together.mp3");
+      // 初始時隱藏暫停按鈕
+      $("#pause").hide();
+
+      $("#play").click(function () {
+        summer.play();
+        $("#pause").show();
+        $("#play").hide();
+        // 立即將進度條設置為0%
+        $("#progress-bar").css("width", "0%");
+      });
+      $("#pause").click(function () {
+        summer.pause();
+        $("#play").show();
+        $("#pause").hide();
+      });
+
+      //製作音樂播放進度條
+      function updateProgressBar() {
+        var percentage = (summer.currentTime / summer.duration) * 100;
+        $("#progress-bar").css("width", percentage + "%");
+      }
+      // 使用定時器每1/10秒更新進度條
+      var updateProgressInterval = setInterval(updateProgressBar, 80);
+
+      // 確保音樂播放時開始更新進度條
+      summer.onplay = function () {
+        updateProgressInterval = setInterval(updateProgressBar, 80);
+      };
+
+      // 確保音樂暫停時停止更新進度條
+      summer.onpause = function () {
+        clearInterval(updateProgressInterval);
+      };
+
+      // 確保音樂結束時重置進度條
+      // 自動偵測播放狀態，播放結束時顯示播放按鈕
+      summer.onended = function () {
+        clearInterval(updateProgressInterval);
+        $("#progress-bar").css("width", "0");
+        $("#pause").hide();
+        $("#play").show();
+      };
+    </script>
+</body>
+</html>

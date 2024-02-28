@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter</title>
+       <!-- fontawesome -->
+   <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+   integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"
+ />
+ <!-- Bootstrap CSS -->
+ <link
+ rel="stylesheet"
+ href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+ crossorigin="anonymous"
+/>
+    <style>
+         body{
+            background: rgb(157, 178, 191);
+            font-family: caveat;
+         }
+
+         .name {
+            color: white;
+            font-family: caveat;
+            font-size: 72px;
+            font-weight: bold;
+            margin-top: 10px;
+            padding-left: 20px; padding-top: 10px;
+         }
+
+        /* 輪播功能 */
+         .wrapper {
+            width: 100%;
+            height: 30%;
+            padding-top: 20px;
+            text-align: center;
+            background-color:  rgb(157, 178, 191);
+         }
+
+         .carousel {
+            width: 55%;
+            margin: 0px auto;
+         }
+
+         .slick-slide {
+            /* 圖片與圖片的間隔大小 */
+            margin: 10px;
+         }
+
+         .slick-slide img {
+            width: 100%;
+            /* //圖片的邊框大小 */
+            border: 5px solid white;
+            object-fit: cover;
+         }
+
+         .content{
+            border: 2px solid white;
+            border-radius: 20px;
+            width: 70%; height: 60%;
+            margin-top: 25px; margin-left: 195px;
+            padding-left: 40px;
+            color: white;
+            font-family: "chenyuluoyan";
+            font-size: 24px;
+         }
+
+         @font-face {
+            font-family: 'chenyuluoyan';
+            src: url(chenyuluoyan_thin-main/ChenYuluoyan-Thin.ttf);
+         }
+
+         .button{
+            color: white;
+            font-size: 28px;
+         }
+
+         .back{
+            display: inline-block; 
+            margin-left: 40px;
+            padding-right: 1263px;
+            margin-bottom: 20px;
+         }
+
+         a:link {
+            /* 正常、未訪問過的連結 */
+            color: white;
+            text-decoration: none;
+         }
+
+         a:visited {
+            /* 訪問過的連結 */
+            color: white;
+            text-decoration: none;
+         }
+
+         a:hover {
+            /* 游標放在連結上時 */
+            color: black;
+            text-decoration: none;
+         }
+
+         a:active {
+            /* 游標點擊時 */
+            color: black;
+            text-decoration: none;
+         }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="./chenyuluoyan_thin-main/" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+<div class="container">
+   <div class="d-flex justify-content-start">
+      <a href="index.html" type="button"class="btn btn-light m-2" style="color: darkslategray;"><i class="fa-regular fa-hand-point-left" style="color: darkslategray;"></i> Album Cover</a>
+   </div>
+    <div class="name">Winter</div>
+    <!-- To use lazy loading, set a data-lazy attribute on your img tags and leave off the src -->
+    <!-- <img data-lazy="img/lazyfonz1.png"/> -->
+    <div class="wrapper">
+        <div id="cover" class="carousel">
+            <div><img data-lazy="./Pictures/Winter/0CF5EFAF-974D-4028-926E-53DD1237E2ED.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Winter/21D4590D-EC37-4EB5-9008-2D8D3F070CFC.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Winter/2477C416-83B1-47E5-8B77-56F373A649E4.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Winter/33D20C74-5F0C-445D-9ACC-A2811B77CFA5.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Winter/D26035BF-9E6B-4F75-9BD0-51CC9986B3DC.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Winter/F5D9CFB1-04E2-4123-880D-4A38C1589C73.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Winter/F09E7A6D-7D2A-4EA0-931F-E0E9A5080216.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Winter/551479C8-D632-48B2-82E2-B1C6C3D8C6AE.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Winter/m1.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Winter/m1 2.jpeg" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Winter/maryjane.JPG" width="200" height="250"/></div>
+            <div><img data-lazy="./Pictures/Winter/0FE00FB3-D6BE-4500-B4CA-D60D91672A9C.jpeg" width="200" height="250"/></div>
+        </div>
+    </div>
+
+    <div class="control d-flex justify-content-center">
+      <a
+        class="btn m-2"
+        id="play"
+        type="button"
+        style="background-color: transparent; border: 1px solid white"
+      >
+        <i class="fa-solid fa-play" style="color: white"></i>
+      </a>
+      <a
+        class="btn m-2"
+        id="pause"
+        type="button"
+        style="background-color: transparent; border: 1px solid white"
+      >
+        <i class="fa-solid fa-pause" style="color: white"></i>
+      </a>
+    </div>
+  <!-- 歌曲播放進度 -->
+  <div class="progress">
+    <div
+      class="progress-bar"
+      id="progress-bar"
+      role="progressbar"
+      style="background-color:white"
+    ></div>
+  </div>
+
+    <div class="content">
+        <p>To: 我的聖誕老婆婆 <br/>
+            &emsp;冬天，是我第二喜歡的季節，但12月卻是我最喜歡的月份！<br/>
+            &emsp;因為有我最喜歡的節日在裡面-聖誕節！！！（因為貝殼不耐寒，所以冬天是第二名，哈哈！）<br/>
+            &emsp;聖誕節充滿了歡樂、歡笑，也蘊含著分享的含義在其中，<br/>
+            &emsp;"Sharing is CARING!!!", 這句話大該是姆明谷的家規吧！<br/>
+            &emsp;（以後必須做匾額掛在牆上，嘻嘻！）<br/>
+            <br/>
+            &emsp;很開心，能夠與妳共度三個聖誕節，共築一個家，是我們共同的夢想。<br/>
+            &emsp;這個家不僅是能夠遮風避雨的地方，更是承載著我們的回憶、夢想與愛。<br/>
+            &emsp;在這個家裡，我們分享著喜怒哀樂，彼此扶持、理解、包容，還有很多食物！！<br>
+            &emsp;是個令人有歸屬感且富足的溫馨小窩。<br/>
+            &emsp; 每一個聖誕節，我們都身處不同住所，但唯一不變的，是皆與妳一起度過，<br/>
+            &emsp;我們一起禱告、吃聖誕大餐、選禮物、電影馬拉松、煮熱紅酒，一同感受節日氣氛，<br/>
+            &emsp;對我來說，已十分滿足。<br/>
+            <br/>
+            &emsp;今年，即將迎來我們第四個聖誕節，期待與妳繼續共築屬於我們的家<br/>
+            &emsp;謝謝你，一直以來的陪伴與呵護，<br/>
+            &emsp;愛你，四週年快樂。<br/>
+        </p>
+    </div> 
+</div>
+<div class="button">
+   <div class="back"><a href="./autumn.html"><i class="fa-solid fa-backward"></i></div>
+</div>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="./slick-1.8.1/slick/slick.js"></script>
+<script type="text/javascript" src="./slick-1.8.1/slick/slick.min.js"></script>
+<script>
+    $('.carousel').slick({
+        lazyLoad: 'ondemand',
+        slidesToShow: 4,
+        slidesToScroll: 1
+    });
+</script>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var winter = new Audio("./music/Grow Old with Me.mp3");
+      // 初始時隱藏暫停按鈕
+      $("#pause").hide();
+
+      $("#play").click(function () {
+        winter.play();
+        $("#pause").show();
+        $("#play").hide();
+        // 立即將進度條設置為0%
+        $("#progress-bar").css("width", "0%");
+      });
+      $("#pause").click(function () {
+        winter.pause();
+        $("#play").show();
+        $("#pause").hide();
+      });
+
+      //製作音樂播放進度條
+      function updateProgressBar() {
+        var percentage = (winter.currentTime / winter.duration) * 100;
+        $("#progress-bar").css("width", percentage + "%");
+      }
+      // 使用定時器每1/10秒更新進度條
+      var updateProgressInterval = setInterval(updateProgressBar, 80);
+
+      // 確保音樂播放時開始更新進度條
+      winter.onplay = function () {
+        updateProgressInterval = setInterval(updateProgressBar, 80);
+      };
+
+      // 確保音樂暫停時停止更新進度條
+      winter.onpause = function () {
+        clearInterval(updateProgressInterval);
+      };
+
+      // 確保音樂結束時重置進度條
+      // 自動偵測播放狀態，播放結束時顯示播放按鈕
+      winter.onended = function () {
+        clearInterval(updateProgressInterval);
+        $("#progress-bar").css("width", "0");
+        $("#pause").hide();
+        $("#play").show();
+      };
+    </script>
+</body>
+</html>

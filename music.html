@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="progress">
+      <div
+        class="progress-bar"
+        id="progress-bar"
+        role="progressbar"
+        style="background-color: darkblue"
+      ></div>
+    </div>
+
+    <div class="container d-flex">
+      <a class="btn m-2" id="play" type="button" style="background-color: transparent;border: 1px solid darkblue;">
+        <i class="fa-solid fa-play" style="color: darkblue;"></i>
+      </a>
+      <a class="btn m-2" id="pause" type="button" style="background-color: transparent;border: 1px solid darkblue;">
+        <i class="fa-solid fa-pause" style="color: darkblue;"></i>
+      </a>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var spring = new Audio("./music/Perfect.mp3");
+      // 初始時隱藏暫停按鈕
+      $("#pause").hide();
+
+      $("#play").click(function () {
+        spring.play();
+        $("#pause").show();
+        $("#play").hide();
+        // 立即將進度條設置為0%
+        $("#progress-bar").css("width", "0%");
+      });
+      $("#pause").click(function () {
+        spring.pause();
+        $("#play").show();
+        $("#pause").hide();
+      });
+
+      //製作音樂播放進度條
+      function updateProgressBar() {
+        var percentage = (spring.currentTime / spring.duration) * 100;
+        $("#progress-bar").css("width", percentage + "%");
+      }
+      // 使用定時器每1/10秒更新進度條
+      var updateProgressInterval = setInterval(updateProgressBar, 50);
+
+      // 確保音樂播放時開始更新進度條
+      spring.onplay = function () {
+        updateProgressInterval = setInterval(updateProgressBar, 50);
+      };
+
+      // 確保音樂暫停時停止更新進度條
+      spring.onpause = function () {
+        clearInterval(updateProgressInterval);
+      };
+
+      // 確保音樂結束時重置進度條
+      // 自動偵測播放狀態，播放結束時顯示播放按鈕
+      spring.onended = function () {
+        clearInterval(updateProgressInterval);
+        $("#progress-bar").css("width", "0");
+        $("#pause").hide();
+        $("#play").show();
+      };
+    </script>
+  </body>
+</html>

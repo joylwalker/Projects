@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALBUMN</title>
+    <style>
+     body{
+        font-family: caveat;
+        background-color:rgb(82, 109, 130);
+     }
+     .album{
+        display: flex;
+        flex-flow: column wrap;
+        color: white;
+        height: 100vh; width: 100vw;
+        justify-content: center;
+        align-content: center;
+     }  
+
+     .album-cover{
+        display: flex;
+        border-radius: 2%;
+        box-shadow: 8px 5px rgba(160, 159, 159, 0.462); 
+        /* 垂直偏移量，水平偏移量，模糊半径，阴影颜色 */
+     }
+
+     .album-cover > img{
+        width: 100%;
+        border-radius: 2%;
+     }
+
+     .album-title{
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-weight: 400;
+        font-size: 24px;
+        margin-top: 10px;
+     }
+
+     .album-artist{
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 22px;
+     }
+
+     .album-symbols{
+        display: flex;
+        justify-content:flex-end ;
+     }
+
+     .controls{
+        display: inline-flex;
+        justify-content: center;
+        font-size: large;
+        gap: 30px;
+     }
+
+     .hr{
+        border: 1px solid white;
+        margin-top: 15px;
+     }
+
+
+     .release-date{
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+        font-style: italic;
+        margin-top: 13px;
+        
+     }
+
+     .big{
+        font-family: Caveat Brush;
+        font-size: 16px;
+        font-weight: 400;
+     }
+
+     .small{
+        font-family: caveat;
+        font-size: 14px;
+     }
+
+     .content{
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 26px;
+        margin-top: 20px;
+     }   
+     
+     .content ul{
+        list-style-type: none;
+        display: flex; 
+        padding: 0; 
+     }
+     
+     .content ul li {
+        margin-right: 47%; 
+     }
+
+     .content ul li:last-child {
+        margin-right: 0; /* 移除最后一个 li 元素的右邊距 */
+     }   
+
+     a:link {
+     /* 正常、未訪問過的連結 */
+     color: white;
+     text-decoration: none;
+     }
+
+     a:visited {
+     /* 訪問過的連結 */
+     color: white;
+     text-decoration: none;
+     }
+
+     a:hover {
+     /* 游標放在連結上時 */
+     color: black;
+     text-decoration: none;
+     }
+
+     a:active {
+     /* 游標點擊時 */
+     color: black;
+     text-decoration: none;
+}
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="album">
+        <div class="album-cover">
+          <img src="./Pictures/Cover/cover.JPG" height="420px" alt="專輯封面">
+          <img src="./Pictures/Cover/music island.jpeg" height="420px" alt="專輯封面">
+        </div>
+
+        <div class="album-title">4th Anniversary</div>
+        <div class="album-artist">Joy Lee</div>
+        <div class="album-symbols">
+            <img src="./Pictures/Cover/spotify sound waves.jpeg" height="32px" alt="sound waves">
+        </div>
+        
+        <div class="controls">
+            <div class="control-button">&#9658;</div>
+            <div class="control-button">&#10074;&#10074;</div>
+            <div class="control-button">&#9654;&#9654;</div>
+        </div>
+
+        <div hr class="hr"></div>
+
+        <div class="release-date">
+            <div class="big">Release Date</div>
+            <div class="small">Feb.29, 2024</div>
+        </div>
+
+        <div class="content">
+          <ul>
+            <li><a href="./spring.html">Spring</a></li>
+            <li><a href="./summer.html">Summer</a></li>
+            <li><a href="./autumn.html">Autumn</a></li>
+            <li><a href="./winter.html">Winter</a></li>
+          </ul>
+        </div>
+      </div>
+  
+  
+</div>
+</body>
+</html>
